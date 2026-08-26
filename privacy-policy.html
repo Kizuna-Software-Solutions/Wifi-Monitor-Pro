@@ -5,20 +5,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy - WiFi Monitor Pro</title>
   <style>
+    :root {
+      --primary-color: #2c3e50;
+      --accent-color: #2980b9;
+      --bg-color: #fafafa;
+      --card-bg: #ffffff;
+      --text-color: #333333;
+      --border-color: #e2e8f0;
+    }
     body {
-      font-family: Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.6;
-      color: #333;
-      background-color: #fafafa;
+      color: var(--text-color);
+      background-color: var(--bg-color);
       padding: 20px;
       max-width: 900px;
       margin: auto;
     }
-    h1, h2, h3 {
-      color: #2c3e50;
+    header {
+      margin-bottom: 24px;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 16px;
+    }
+    h1 {
+      color: var(--primary-color);
+      margin-bottom: 4px;
+      font-size: 2em;
+    }
+    .app-subtitle {
+      font-size: 1.1em;
+      color: var(--accent-color);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .lang-switcher {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+    .lang-btn {
+      background: #e2e8f0;
+      border: 1px solid #cbd5e1;
+      color: #334155;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .lang-btn:hover {
+      background: #cbd5e1;
+    }
+    .lang-btn.active {
+      background: var(--accent-color);
+      color: #ffffff;
+      border-color: var(--accent-color);
+    }
+    .last-updated {
+      font-size: 0.9em;
+      color: #64748b;
+      margin-bottom: 20px;
+    }
+    .policy-content {
+      display: none;
+    }
+    .policy-content.active {
+      display: block;
+    }
+    h2 {
+      color: var(--primary-color);
+      margin-top: 28px;
+      margin-bottom: 12px;
+      font-size: 1.3em;
+      border-bottom: 1px solid #f1f5f9;
+      padding-bottom: 6px;
+    }
+    ul {
+      margin-left: 24px;
+      margin-bottom: 16px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    p {
+      margin-bottom: 14px;
+    }
+    .summary-card {
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 36px;
+      margin-bottom: 20px;
+    }
+    .summary-card h3 {
+      color: #0369a1;
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.15em;
+    }
+    .summary-card p {
+      color: #0c4a6e;
+      margin-bottom: 0;
+      font-size: 0.95em;
     }
     a {
-      color: #2980b9;
+      color: var(--accent-color);
       text-decoration: none;
     }
     a:hover {
@@ -27,76 +122,218 @@
     footer {
       margin-top: 40px;
       font-size: 0.9em;
-      color: #555;
-      border-top: 1px solid #ddd;
-      padding-top: 15px;
+      color: #64748b;
+      border-top: 1px solid var(--border-color);
+      padding-top: 20px;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p><strong>Effective Date:</strong> June 6, 2026</p>
+  <header>
+    <h1>Privacy Policy</h1>
+    <div class="app-subtitle">WiFi Monitor Pro &bull; Kizuna Software Solutions</div>
+    
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="switchLanguage('en')">English</button>
+      <button class="lang-btn" onclick="switchLanguage('ja')">日本語</button>
+      <button class="lang-btn" onclick="switchLanguage('fr')">Français</button>
+      <button class="lang-btn" onclick="switchLanguage('ru')">Русский</button>
+    </div>
+  </header>
 
-  <p>At <strong>Kizuna Software Solutions</strong>, we built <strong>WiFi Monitor Pro</strong> with a strong commitment to user privacy. This Privacy Policy outlines how our Application interacts with your data, what information is processed to deliver our network diagnostic services, and how we protect your digital footprint.</p>
+  <!-- ENGLISH VERSION (DEFAULT) -->
+  <div id="lang-en" class="policy-content active">
+    <div class="last-updated">Last Updated: August 17, 2026</div>
 
-  <p>By installing and utilizing WiFi Monitor Pro, you acknowledge and agree to the data practices described in this document. This policy forms a part of our overall commitment to transparency and operates alongside our standard Terms and Conditions.</p>
+    <h2>1. Information We Process</h2>
+    <p>WiFi Monitor Pro processes the technical information needed to provide its network diagnostic features. This may include:</p>
+    <ul>
+      <li>SSID and BSSID of wireless networks.</li>
+      <li>IP address and network information required for connectivity and latency diagnostics.</li>
+      <li>Wi-Fi signal and other technical measurements required for network analysis.</li>
+      <li>Technical information associated with tests and application performance.</li>
+    </ul>
 
-  <h2>1. Data Processing and Core Functionality</h2>
-  <p>We believe in minimal data overhead. To deliver real-time network insights—such as speed testing, signal heatmapping, DFS monitoring, and deployment analysis—the Application requires operational access to specific network data.</p>
+    <h2>2. Local Processing</h2>
+    <p>Network information used by WiFi Monitor Pro is processed on your device for its core diagnostic functions. We do not intentionally upload SSIDs, BSSIDs, Wi-Fi scan results, or network measurements to Kizuna Software Solutions' servers for advertising or profiling.</p>
+    <p><strong>AI Analytics:</strong> AI-powered analytics are used to analyze network performance and provide insights within the Application. The AI feature is designed to process the required technical data securely and is not used for advertising, profiling, or selling user information.</p>
 
-  <h3>Localized Technical Data</h3>
-  <p>To analyze your network environment, the Application processes:</p>
-  <ul>
-    <li><strong>Service Set Identifier (SSID):</strong> To identify your current wireless network connection.</li>
-    <li><strong>Basic Service Set Identifier (BSSID):</strong> To detect specific wireless access points.</li>
-    <li><strong>Internet Protocol (IP) Address:</strong> To run standard routing and latency diagnostics.</li>
-  </ul>
+    <h2>3. Help and Support & Crash Logs</h2>
+    <p>We collect crash logs only to investigate issues, debug errors, and improve Application performance and stability. WiFi Monitor Pro does not use third-party tracking services or sell your data. If you need help or support, you may choose to share application logs or diagnostic information with Kizuna Software Solutions through the support feature or by email.</p>
+    <p>Any information you choose to send to us is used only to investigate issues, provide support, and improve the Application. We do not request or require you to share logs unless they are needed to help resolve a reported issue.</p>
 
-  <p><strong>Our Local-First Principle:</strong> All network-specific data listed above is processed entirely on your physical device to generate your diagnostics. This information is <strong>never</strong> transmitted to, stored on, or harvested by our external corporate servers.</p>
+    <h2>4. Advertising and Tracking</h2>
+    <p>WiFi Monitor Pro is ad-free. We do not sell, rent, or trade your personal information, and we do not use the Application for cross-app advertising or behavioral tracking. We do not intentionally collect or use the Google Advertising ID for advertising purposes.</p>
 
-  <h2>2. Advertising & Marketing Policy</h2>
-  <p><strong>WiFi Monitor Pro is completely ad-free.</strong> We do not partner with ad networks, serve commercial banners, or track your behavior across third-party applications for marketing purposes. Because of this, our application does not request, access, or collect your device's Google Advertising ID.</p>
+    <h2>5. Permissions and Storage</h2>
+    <p>The Application may request Android permissions required for Wi-Fi scanning, network diagnostics, or features you choose to use. Permissions can be managed through your device settings.</p>
+    <p>The Application may use local storage required for normal operation. This storage is not intended for advertising or cross-app tracking.</p>
 
-  <h2>3. Third-Party Services</h2>
-  <p>We limit third-party code strictly to platform essentials required for stability and core infrastructure. You can review the privacy management of our underlying platform provider here:</p>
-  <ul>
-    <li><a href="https://policies.google.com/privacy">Google Play Services</a></li>
-  </ul>
+    <h2>6. Security</h2>
+    <p>We use reasonable technical and organizational safeguards to protect information handled by WiFi Monitor Pro. However, no electronic storage or transmission method can be guaranteed to be completely secure.</p>
 
-  <h2>4. Log Data</h2>
-  <p>In the event of an unexpected application crash or software error, WiFi Monitor Pro collects diagnostic information (via third-party debugging tools) generated by your device, known as <strong>Log Data</strong>.</p>
-  <p>This troubleshooting data may include:</p>
-  <ul>
-    <li>Your device's IP address and manufacturer name</li>
-    <li>Operating system version and device configuration at the time of the error</li>
-    <li>Time, date, and performance metrics associated with the event</li>
-  </ul>
-  <p>We use these logs exclusively for debugging and optimizing application stability.</p>
+    <h2>7. Policy Updates</h2>
+    <p>We may update this Privacy Policy when our features, data practices, or legal requirements change. The updated policy will include a revised 'Last Updated' date.</p>
 
-  <h2>5. Storage and Tracking Identifiers</h2>
-  <p>WiFi Monitor Pro does not explicitly use web cookies. However, the Application may utilize native platform development kits or infrastructure libraries that rely on temporary local storage to run optimally. You can manage storage permissions directly within your mobile operating system settings. Note that disabling essential local storage dependencies may impact certain performance features.</p>
+    <h2>8. Contact Us</h2>
+    <p>Kizuna Software Solutions<br>
+    Email: <a href="mailto:support@kizunasoftwaresolutions.com">support@kizunasoftwaresolutions.com</a></p>
 
-  <h2>6. Service Providers</h2>
-  <p>We may collaborate with external infrastructure partners or cloud service providers to:</p>
-  <ul>
-    <li>Support, maintain, or host infrastructure for our Service</li>
-    <li>Perform software optimizations on our behalf</li>
-    <li>Assist us in analyzing aggregated, non-personal performance metrics</li>
-  </ul>
-  <p>These entities are granted access to diagnostic data strictly to perform these tasks on our behalf and are contractually bound to maintain strict confidentiality.</p>
+    <div class="summary-card">
+      <h3>Privacy Summary</h3>
+      <p>WiFi Monitor Pro is designed with a local-first approach. Your Wi-Fi network information is processed on your device for core diagnostics. We collect crash logs only when needed for debugging and app stability. If you contact support, you may choose to share logs with us for troubleshooting and support.</p>
+    </div>
+  </div>
 
-  <h2>7. Security</h2>
-  <p>The security of your operational environment is paramount to us. While we deploy commercially standard safeguards to protect application data, please note that no method of digital transmission or electronic storage is 100% secure. We continuously evaluate our workflows but cannot guarantee absolute data security.</p>
+  <!-- JAPANESE VERSION -->
+  <div id="lang-ja" class="policy-content">
+    <div class="last-updated">最終更新日: 2026年8月17日</div>
 
-  <h2>8. Policy Updates</h2>
-  <p>We reserve the right to modify this Privacy Policy to align with new features, operational shifts, or regulatory mandates. Any changes will be published directly to this page and take effect immediately upon posting. We recommend checking back periodically to stay informed.</p>
+    <h2>1. 収集および処理する情報</h2>
+    <p>WiFi Monitor Pro は、ネットワーク診断機能を提供するために必要な技術情報を処理します。これには以下が含まれる場合があります：</p>
+    <ul>
+      <li>ワイヤレスネットワークの SSID および BSSID。</li>
+      <li>接続およびレイテンシ診断に必要な IP アドレスおよびネットワーク情報。</li>
+      <li>ネットワーク分析に必要な Wi-Fi 信号およびその他の技術的測定値。</li>
+      <li>テストおよびアプリケーションのパフォーマンスに関連する技術情報。</li>
+    </ul>
 
-  <h2>9. Contact Us</h2>
-  <p>For any inquiries, clarifications, or technical feedback regarding this Privacy Policy, please reach out to our team at:</p>
-  <p><a href="mailto:support@kizunasoftwaresolutions.com">support@kizunasoftwaresolutions.com</a></p>
+    <h2>2. ローカル処理</h2>
+    <p>WiFi Monitor Pro で使用されるネットワーク情報は、主要な診断機能のために端末上で処理されます。SSID、BSSID、Wi-Fi スキャン結果、またはネットワーク測定データを広告やプロファイリングの目的で Kizuna Software Solutions のサーバーにアップロードすることはありません。</p>
+    <p><strong>AI アナリティクス：</strong> AI を活用したアナリティクスは、アプリ内でネットワークパフォーマンスを分析しインサイトを提供するために使用されます。AI 機能は必要な技術データを安全に処理するように設計されており、広告、プロファイリング、またはユーザー情報の販売には使用されません。</p>
+
+    <h2>3. ヘルプ・サポートおよびクラッシュログ</h2>
+    <p>当社は、問題の調査、エラーのデバッグ、およびアプリケーションの安定性向上のためにのみクラッシュログを収集します。WiFi Monitor Pro はサードパーティのトラッキングサービスを使用せず、お客様のデータを販売することもありません。サポートが必要な場合は、サポート機能または電子メールを通じて、アプリケーションログや診断情報を Kizuna Software Solutions と共有することを選択できます。</p>
+    <p>ご送信いただいた情報は、問題の調査、サポートの提供、アプリケーションの改善のみに使用されます。報告された問題の解決に必要な場合を除き、ログの共有を要求または義務付けることはありません。</p>
+
+    <h2>4. 広告とトラッキング</h2>
+    <p>WiFi Monitor Pro は広告フリーです。お客様の個人情報を販売、賃貸、または取引することはなく、アプリ間の広告や行動トラッキングのために本アプリケーションを使用することもありません。広告目的で Google 広告 ID を収集または使用することはありません。</p>
+
+    <h2>5. 権限とストレージ</h2>
+    <p>本アプリケーションは、Wi-Fi スキャン、ネットワーク診断、または使用を選択した機能に必要な Android 権限を要求する場合があります。権限はデバイスの設定から管理できます。</p>
+    <p>本アプリケーションは、通常の操作に必要なローカルストレージを使用する場合があります。このストレージは広告やアプリ間トラッキングを目的としたものではありません。</p>
+
+    <h2>6. セキュリティ</h2>
+    <p>WiFi Monitor Pro で取り扱う情報を保護するため、合理的かつ技術的・組織的な保護措置を講じています。ただし、いかなる電子ストレージや送信方法も完全に安全であることを保証することはできません。</p>
+
+    <h2>7. ポリシーの更新</h2>
+    <p>機能、データ慣行、または法的要件が変更された場合、本プライバシーポリシーを更新することがあります。更新されたポリシーには改訂された「最終更新日」が含まれます。</p>
+
+    <h2>8. お問い合わせ</h2>
+    <p>Kizuna Software Solutions<br>
+    メール: <a href="mailto:support@kizunasoftwaresolutions.com">support@kizunasoftwaresolutions.com</a></p>
+
+    <div class="summary-card">
+      <h3>プライバシー概要</h3>
+      <p>WiFi Monitor Pro はローカルファーストのアプローチで設計されています。Wi-Fi ネットワーク情報は、コア診断のために端末上で処理されます。デバッグとアプリの安定性の向上に必要な場合にのみクラッシュログを収集します。サポートにお問い合わせの際、トラブルシューティングおよびサポートのためにログを共有することを選択できます。</p>
+    </div>
+  </div>
+
+  <!-- FRENCH VERSION -->
+  <div id="lang-fr" class="policy-content">
+    <div class="last-updated">Dernière mise à jour : 17 août 2026</div>
+
+    <h2>1. Informations que nous traitons</h2>
+    <p>WiFi Monitor Pro traite les informations techniques nécessaires à la fourniture de ses fonctionnalités de diagnostic réseau. Cela peut inclure :</p>
+    <ul>
+      <li>SSID et BSSID des réseaux sans fil.</li>
+      <li>Adresse IP et informations réseau requises pour les diagnostics de connectivité et de latence.</li>
+      <li>Signal Wi-Fi et autres mesures techniques requises pour l'analyse du réseau.</li>
+      <li>Informations techniques associées aux tests et aux performances de l'application.</li>
+    </ul>
+
+    <h2>2. Traitement local</h2>
+    <p>Les informations réseau utilisées par WiFi Monitor Pro sont traitées sur votre appareil pour ses fonctions de diagnostic de base. Nous n'téléchargeons pas intentionnellement les SSID, BSSID, résultats de balayage Wi-Fi ou mesures réseau sur les serveurs de Kizuna Software Solutions à des fins publicitaires ou de profilage.</p>
+    <p><strong>Analytique IA :</strong> Les analyses alimentées par l'IA sont utilisées pour analyser les performances du réseau et fournir des informations au sein de l'application. La fonctionnalité IA est conçue pour traiter les données techniques requises en toute sécurité et n'est pas utilisée pour la publicité, le profilage ou la vente d'informations utilisateur.</p>
+
+    <h2>3. Aide, support et journaux de plantage</h2>
+    <p>Nous collectons les journaux de plantage uniquement pour examiner les problèmes, déboguer les erreurs et améliorer la stabilité de l'application. WiFi Monitor Pro n'utilise pas de services de suivi tiers et ne vend pas vos données. Si vous avez besoin d'aide ou d'assistance, vous pouvez choisir de partager des journaux d'application ou d'autres informations de diagnostic avec Kizuna Software Solutions via la fonctionnalité de support ou par e-mail.</p>
+    <p>Toutes les informations que vous choisissez de nous envoyer sont utilisées uniquement pour examiner les problèmes, fournir du support et améliorer l'application. Nous ne demandons ni ne vous obligeons à partager des journaux, sauf si cela est nécessaire pour résoudre un problème signalé.</p>
+
+    <h2>4. Publicité et suivi</h2>
+    <p>WiFi Monitor Pro est sans publicité. Nous ne vendons, ne louons ni ne commercialisons vos informations personnelles, et nous n'utilisons pas l'application pour de la publicité inter-applications ou du suivi comportemental. Nous ne collectons ni n'utilisons intentionnellement l'identifiant publicitaire Google à des fins publicitaires.</p>
+
+    <h2>5. Autorisations et stockage</h2>
+    <p>L'Application peut demander les autorisations Android requises pour le balayage Wi-Fi, les diagnostics réseau ou les fonctionnalités que vous choisissez d'utiliser. Les autorisations peuvent être gérées dans les paramètres de votre appareil.</p>
+    <p>L'Application peut utiliser le stockage local requis pour son fonctionnement normal. Ce stockage n'est pas destiné à la publicité ou au suivi inter-applications.</p>
+
+    <h2>6. Sécurité</h2>
+    <p>Nous utilisons des garanties techniques et organisationnelles raisonnables pour protéger les informations traitées par WiFi Monitor Pro. Cependant, aucune méthode de stockage ou de transmission électronique ne peut être garantie comme totalement sécurisée.</p>
+
+    <h2>7. Mises à jour de la politique</h2>
+    <p>Nous pouvons mettre à jour cette politique de confidentialité lorsque nos fonctionnalités, nos pratiques en matière de données ou nos exigences légales changent. La politique mise à jour inclura une date de « Dernière mise à jour » révisée.</p>
+
+    <h2>8. Contactez-nous</h2>
+    <p>Kizuna Software Solutions<br>
+    E-mail : <a href="mailto:support@kizunasoftwaresolutions.com">support@kizunasoftwaresolutions.com</a></p>
+
+    <div class="summary-card">
+      <h3>Résumé de la confidentialité</h3>
+      <p>WiFi Monitor Pro est conçu avec une approche locale d'abord. Vos informations de réseau Wi-Fi sont traitées sur votre appareil pour les diagnostics de base. Nous collectons des journaux de plantage uniquement lorsque cela est nécessaire pour le débogage et la stabilité de l'application. Si vous contactez le support, vous pouvez choisir de partager des journaux avec nous pour le dépannage et l'assistance.</p>
+    </div>
+  </div>
+
+  <!-- RUSSIAN VERSION -->
+  <div id="lang-ru" class="policy-content">
+    <div class="last-updated">Последнее обновление: 17 августа 2026 г.</div>
+
+    <h2>1. Информация, которую мы обрабатываем</h2>
+    <p>WiFi Monitor Pro обрабатывает техническую информацию, необходимую для предоставления функций диагностики сети. Это может включать:</p>
+    <ul>
+      <li>SSID и BSSID беспроводных сетей.</li>
+      <li>IP-адрес и сетевую информацию, необходимую для диагностики подключения и задержки.</li>
+      <li>Сигнал Wi-Fi и другие технические измерения, необходимые для анализа сети.</li>
+      <li>Техническую информацию, связанную с тестами и производительностью приложения.</li>
+    </ul>
+
+    <h2>2. Локальная обработка</h2>
+    <p>Сетевая информация, используемая WiFi Monitor Pro, обрабатывается на вашем устройстве для его основных функций диагностики. Мы намеренно не загружаем SSID, BSSID, результаты сканирования Wi-Fi или сетевые измерения на серверы Kizuna Software Solutions для рекламы или профилирования.</p>
+    <p><strong>ИИ-аналитика:</strong> Аналитика на базе ИИ используется для анализа производительности сети и предоставления информации внутри приложения. Функция ИИ предназначена для безопасной обработки необходимых технических данных и не используется для рекламы, профилирования или продажи пользовательской информации.</p>
+
+    <h2>3. Помощь, поддержка и журналы сбоев</h2>
+    <p>Мы собираем журналы сбоев исключительно для расследования проблем, отладки ошибок и улучшения стабильности Приложения. WiFi Monitor Pro не использует сторонние службы отслеживания и не продает ваши данные. Если вам нужна помощь или поддержка, вы можете отправить журналы приложения или диагностическую информацию в Kizuna Software Solutions через функцию поддержки или по электронной почте.</p>
+    <p>Любая информация, которую вы решите нам отправить, используется только для расследования проблем, предоставления поддержки и улучшения приложения. Мы не запрашиваем и не требуем от вас отправки журналов, если они не требуются для решения зарегистрированной проблемы.</p>
+
+    <h2>4. Реклама и отслеживание</h2>
+    <p>WiFi Monitor Pro не содержит рекламы. Мы не продаем, не сдаем в аренду и не обмениваем вашу личную информацию, а также не используем Приложение для межприложенческой рекламы или поведенческого отслеживания. Мы намеренно не собираем и не используем рекламный идентификатор Google в рекламных целях.</p>
+
+    <h2>5. Разрешения и хранилище</h2>
+    <p>Приложение может запрашивать разрешения Android, необходимые для сканирования Wi-Fi, диагностики сети или функций, которые вы решили использовать. Разрешениями можно управлять в настройках устройства.</p>
+    <p>Приложение может использовать локальное хранилище, необходимое для нормальной работы. Это хранилище не предназначено для рекламы или отслеживания между приложениями.</p>
+
+    <h2>6. Безопасность</h2>
+    <p>Мы используем разумные технические и организационные меры предосторожности для защиты информации, обрабатываемой WiFi Monitor Pro. Однако ни один метод электронного хранения или передачи не может быть гарантированно полностью безопасным.</p>
+
+    <h2>7. Обновления политики</h2>
+    <p>Мы можем обновлять настоящую Политику конфиденциальности при изменении наших функций, практики работы с данными или юридических требований. Обновленная политика будет содержать новую дату «Последнее обновление».</p>
+
+    <h2>8. Свяжитесь с нами</h2>
+    <p>Kizuna Software Solutions<br>
+    Эл. почта: <a href="mailto:support@kizunasoftwaresolutions.com">support@kizunasoftwaresolutions.com</a></p>
+
+    <div class="summary-card">
+      <h3>Краткая информация о конфиденциальности</h3>
+      <p>WiFi Monitor Pro разработан с приоритизацией локальной обработки. Информация о вашей сети Wi-Fi обрабатывается на вашем устройстве для основных функций диагностики. Мы собираем журналы сбоев только при необходимости для отладки и стабильности приложения. Если вы обращаетесь в поддержку, вы можете отправить нам журналы для устранения неполадок.</p>
+    </div>
+  </div>
 
   <footer>
-    <p>&copy; 2025 Kizuna Software Solutions. All Rights Reserved.</p>
+    <p>&copy; 2026 Kizuna Software Solutions. All Rights Reserved.</p>
+    <p><a href="index.html">Home</a> &bull; <a href="privacy-policy.html">Privacy Policy</a> &bull; <a href="terms-of-service.html">Terms of Service</a> &bull; <a href="delete-account.html">Delete Account</a> &bull; <a href="delete-data.html">Delete Data</a></p>
   </footer>
+
+  <script>
+    function switchLanguage(lang) {
+      document.querySelectorAll('.policy-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      
+      const targetContent = document.getElementById('lang-' + lang);
+      if (targetContent) targetContent.classList.add('active');
+
+      const targetBtn = Array.from(document.querySelectorAll('.lang-btn')).find(btn => btn.getAttribute('onclick').includes("'" + lang + "'"));
+      if (targetBtn) targetBtn.classList.add('active');
+    }
+  </script>
 </body>
 </html>
